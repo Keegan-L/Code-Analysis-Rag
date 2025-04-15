@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Analysis Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Code Analysis Chat</h1>
+            <p>Upload your repository and ask questions about the code</p>
+        </header>
+        
+        <div class="upload-section" id="upload-section">
+            <h2>Upload Repository</h2>
+            <form id="upload-form" enctype="multipart/form-data">
+                <div class="file-input">
+                    <input type="file" id="repository" name="repository" accept=".zip">
+                    <label for="repository">Choose a zip file</label>
+                </div>
+                <button type="submit">Upload and Process</button>
+            </form>
+            <div id="upload-status"></div>
+        </div>
+        
+        <div class="repository-info" id="repository-info" style="display: none;">
+            <h2>Repository Summary</h2>
+            <div id="repo-summary"></div>
+            <div class="action-buttons">
+                <button id="generate-docs" class="action-button">Generate Documentation</button>
+            </div>
+        </div>
+        
+        <div class="chat-section" id="chat-section" style="display: none;">
+            <h2>Ask About the Code</h2>
+            <div class="chat-container">
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message system">
+                        Upload a repository and ask me questions about the code!
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="query-input" placeholder="Ask a question about the repository...">
+                    <button id="send-query">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

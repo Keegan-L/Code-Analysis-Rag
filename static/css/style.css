@@ -1,0 +1,401 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+/* Upload Section */
+.upload-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.file-input {
+    margin-bottom: 1rem;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+label[for="repository"] {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #3498db;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s;
+}
+
+label[for="repository"]:hover {
+    background: #2980b9;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background: #27ae60;
+}
+
+#upload-status {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+#upload-status.error {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+#upload-status.success {
+    background: #d4edda;
+    color: #155724;
+}
+
+#upload-status.info {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+/* Repository Info */
+.repository-info {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+/* Chat Section */
+.chat-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.chat-container {
+    margin-bottom: 1rem;
+}
+
+.chat-messages {
+    height: 400px;
+    overflow-y: auto;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.message {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.message.system {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #dee2e6;
+}
+
+.message.user {
+    background-color: #e3f2fd;
+    color: #1976d2;
+    margin-left: auto;
+    border: 1px solid #bbdefb;
+}
+
+.message.assistant {
+    background-color: #f5f5f5;
+    color: #333;
+    margin-right: auto;
+    border: 1px solid #e0e0e0;
+}
+
+.chat-input {
+    display: flex;
+    gap: 1rem;
+}
+
+#query-input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Code Display */
+.code-reference {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.code-header {
+    background-color: #e9ecef;
+    padding: 0.5rem 1rem;
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: #495057;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.code-container {
+    background-color: #282c34;
+    color: #abb2bf;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 1rem;
+}
+
+pre {
+    margin: 0;
+    padding: 1rem;
+    font-family: 'Fira Code', 'Consolas', 'Monaco', 'Andale Mono', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+code {
+    display: block;
+    white-space: pre;
+}
+
+.line-number {
+    color: #6c757d;
+    padding-right: 1rem;
+    user-select: none;
+}
+
+.line-content {
+    padding-left: 0.5rem;
+}
+
+.line-content.highlight {
+    background-color: rgba(255, 255, 0, 0.2);
+    display: block;
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .chat-messages {
+        height: 300px;
+    }
+    
+    .message {
+        max-width: 90%;
+    }
+    
+    .code-container {
+        margin: 0.5rem;
+    }
+    
+    pre {
+        font-size: 0.8rem;
+    }
+}
+
+.action-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.action-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.action-button:hover {
+    background-color: #45a049;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    width: 80%;
+    max-width: 800px;
+    max-height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #6c757d;
+}
+
+.modal-body {
+    padding: 1rem;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.modal-footer {
+    padding: 1rem;
+    border-top: 1px solid #dee2e6;
+    text-align: right;
+}
+
+.download-button {
+    padding: 0.5rem 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.download-button:hover {
+    background-color: #2980b9;
+}
+
+/* Documentation Content Styles */
+.docs-section {
+    margin-bottom: 2rem;
+}
+
+.docs-section h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.component, .dependency {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.component h4, .dependency h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.file-path {
+    color: #6c757d;
+    font-family: monospace;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.component h5 {
+    color: #2c3e50;
+    margin: 1rem 0 0.5rem;
+}
+
+.component ul, .dependency ul {
+    list-style-type: none;
+    padding-left: 1rem;
+}
+
+.component li, .dependency li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.component li::before, .dependency li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #3498db;
+}
