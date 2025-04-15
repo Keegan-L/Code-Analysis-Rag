@@ -78,10 +78,9 @@ http://localhost:5000
 ## Example Questions
 
 - "What does this codebase do?"
-- "How does the authentication system work?"
 - "Show me the main API endpoints"
-- "Explain the database schema"
 - "What are the key dependencies?"
+- "How does file XYZ work?"
 
 ## Project Structure
 
